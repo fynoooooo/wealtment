@@ -8,7 +8,6 @@ import { getUser, removeUser } from "@/lib/auth";
 import type { User } from "@/types";
 import toast from "react-hot-toast";
 import Image from "next/image";
-import logo from "../../../.next/cache/images/wealtment-logo.jpeg";       
 
 const PUBLIC_LINKS = [
   { label: "Home",       href: "/" },
@@ -24,7 +23,7 @@ export function Navbar() {
   const [user, setUser] = useState<User | null>(null);
   const pathname = usePathname();
   const router = useRouter();
-
+let logo ="https://i.postimg.cc/VzFr6Zvn/wealtment.jpg"
   // Hydrate user from localStorage
   useEffect(() => {
     setUser(getUser());
